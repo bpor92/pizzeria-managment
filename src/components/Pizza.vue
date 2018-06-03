@@ -7,13 +7,15 @@
           <img src="http://via.placeholder.com/150x100" alt="">
           <p class="card-text d-inline ml-2">{{item.description}}</p>
         </div>
-        <div v-if="isInBasket">
-          <b-alert show variant="success">Product successful added to basket
-            <icon name="check"></icon>
-          </b-alert>
-        </div>
-        <div v-else>
-          <a class="btn btn-success btn-block" @click="addToBasket({name: item.name, price: item.price, index, quantity: 1, total: item.price})">Add to basket</a>
+        <div v-if="!isUserLoggedIn">
+          <div v-if="isInBasket">
+            <b-alert show variant="success">Product successful added to basket
+              <icon name="check"></icon>
+            </b-alert>
+          </div>
+          <div v-else>
+            <a class="btn btn-success btn-block" @click="addToBasket({name: item.name, price: item.price, index, quantity: 1, total: item.price})">Add to basket</a>
+          </div>
         </div>
       </div>
     </div>
@@ -37,6 +39,9 @@ export default {
   computed: {
     isInBasket() {
       return this.$store.state.basket.find(item => item.name === this.item.name)
+    },
+    isUserLoggedIn() {
+      return this.$store.getters.isUserLoggedIn
     }
   }
 }
