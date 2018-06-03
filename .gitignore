@@ -13,3 +13,10 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+# Firebase
+firebase.json
+firestore.indexes.json
+firestore.rules
+database.rules.json
+.firebaserc
