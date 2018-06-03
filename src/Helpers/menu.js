@@ -1,0 +1,6 @@
+export const MARGHERITA = 'MARGHERITA'
+export const VERONA = 'VERONA'
+export const WEZUWIUSZ = 'WEZUWIUSZ'
+export const FUNGHI = 'FUNGHI'
+export const PARMA = 'PARMA'
+export const FRUTTI_DI_MARE = 'FRUTTI DI MARE'
