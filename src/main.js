@@ -4,7 +4,7 @@ import VeeValidate from 'vee-validate'
 
 import App from './App.vue'
 import { store } from './Store/store'
-import router from './Router/routes'
+import router from './router'
 import Icon from 'vue-awesome/components/Icon'
 
 // font-awesome icons

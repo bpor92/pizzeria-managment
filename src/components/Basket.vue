@@ -52,12 +52,8 @@
 <script>
 import { dbOrderRef } from '../firebase/firebase-config'
 import { currentDate } from '../Helpers/date'
-import Chat from './Chat.vue'
 
 export default {
-  components: {
-    Chat
-  },
   data() {
     return {
       summaryOrder: 0,
